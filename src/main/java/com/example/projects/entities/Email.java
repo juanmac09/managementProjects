@@ -78,6 +78,8 @@ public class Email {
         if (this.emailAttachments == null){
             this.emailAttachments = new ArrayList<>();
         }
-        this.emailAttachments.add(emailAttachment);
+        if (!this.emailAttachments.contains(emailAttachment)){
+            this.emailAttachments.add(emailAttachment);
+        }
     }
 }

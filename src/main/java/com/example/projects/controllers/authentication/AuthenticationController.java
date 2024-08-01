@@ -6,6 +6,8 @@ import com.example.projects.dtos.authentication.RegisterUserDto;
 import com.example.projects.entities.User;
 import com.example.projects.services.authentication.AuthenticationService;
 import com.example.projects.services.authentication.JwtService;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,6 +43,10 @@ public class AuthenticationController {
         loginResponse.setToken(jwtToken);
         loginResponse.setExpiresIn(jwtService.getExpirationTime());
 
-        return ResponseEntity.ok(loginResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("_token",loginResponse.getToken());
+        headers.add("expiresIn","" +loginResponse.getExpiresIn());
+
+        return new ResponseEntity("Authenticated",headers, HttpStatus.OK);
     }
 }

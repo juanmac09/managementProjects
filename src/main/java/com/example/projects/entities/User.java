@@ -130,8 +130,12 @@ public class User implements UserDetails {
         if (roles == null) {
             roles = new ArrayList<>();
         }
-        roles.add(role);
-        role.getUsers().add(this);
+        if (!roles.contains(role)) {
+            roles.add(role);
+
+        }
+        role.addUser(this);
+
     }
 
     public List<Project> getProjects() {
@@ -146,7 +150,9 @@ public class User implements UserDetails {
         if (projects == null) {
             projects = new ArrayList<>();
         }
-        projects.add(project);
+        if (!projects.contains(project)) {
+            projects.add(project);
+        }
         project.setCreatedBy(this);
     }
 
@@ -160,7 +166,9 @@ public class User implements UserDetails {
         if (tasks == null) {
             tasks = new ArrayList<>();
         }
-        tasks.add(task);
+        if (!tasks.contains(task)) {
+            tasks.add(task);
+        }
     }
 
     public List<JwtToken> getTokens() {
@@ -173,6 +181,8 @@ public class User implements UserDetails {
         if (tokens == null) {
             tokens = new ArrayList<>();
         }
-        tokens.add(jwtToken);
+        if (!tokens.contains(jwtToken)) {
+            tokens.add(jwtToken);
+        }
     }
 }

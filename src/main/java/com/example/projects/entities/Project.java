@@ -14,7 +14,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "name",nullable = false)
     private String name;
@@ -53,7 +53,7 @@ public class Project {
     }
 
     //Setters and Getters here...
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 
@@ -102,6 +102,8 @@ public class Project {
         if (this.tasks == null) {
             this.tasks = new ArrayList<>();
         }
-        this.tasks.add(task);
+        if (!this.tasks.contains(task)) {
+            this.tasks.add(task);
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.example.projects.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -56,5 +57,13 @@ public class Role {
         this.users = users;
     }
 
+    public void addUser(User user) {
+        if (this.users == null) {
+            this.users = new ArrayList<>();
+        }
+        if (!this.users.contains(user)) {
+            this.users.add(user);
+        }
+    }
 
 }
