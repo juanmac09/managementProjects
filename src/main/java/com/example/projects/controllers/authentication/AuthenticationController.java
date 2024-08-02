@@ -1,8 +1,8 @@
 package com.example.projects.controllers.authentication;
 
-import com.example.projects.dtos.authentication.LoginResponse;
-import com.example.projects.dtos.authentication.LoginUserDto;
-import com.example.projects.dtos.authentication.RegisterUserDto;
+import com.example.projects.dto.authentication.LoginResponse;
+import com.example.projects.dto.authentication.LoginUserDto;
+import com.example.projects.dto.authentication.RegisterUserDto;
 import com.example.projects.entities.User;
 import com.example.projects.services.authentication.AuthenticationService;
 import com.example.projects.services.authentication.JwtService;

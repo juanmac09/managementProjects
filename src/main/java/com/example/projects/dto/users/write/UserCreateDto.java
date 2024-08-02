@@ -1,4 +1,4 @@
-package com.example.projects.dtos.users.write;
+package com.example.projects.dto.users.write;
 
 import java.util.List;
 

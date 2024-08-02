@@ -1,4 +1,4 @@
-package com.example.projects.dtos.authentication;
+package com.example.projects.dto.authentication;
 
 public class LoginResponse {
     private String token;

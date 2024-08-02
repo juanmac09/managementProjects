@@ -1,6 +1,6 @@
 package com.example.projects.servicesInterfaces.users;
 
-import com.example.projects.dtos.users.write.UserCreateDto;
+import com.example.projects.dto.users.write.UserCreateDto;
 
 public interface IUserWriteService {
 

@@ -1,7 +1,7 @@
 package com.example.projects.services.authentication;
 
-import com.example.projects.dtos.authentication.LoginUserDto;
-import com.example.projects.dtos.authentication.RegisterUserDto;
+import com.example.projects.dto.authentication.LoginUserDto;
+import com.example.projects.dto.authentication.RegisterUserDto;
 import com.example.projects.entities.User;
 import com.example.projects.repositories.users.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;

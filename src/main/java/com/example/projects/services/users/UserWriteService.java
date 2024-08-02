@@ -1,6 +1,6 @@
 package com.example.projects.services.users;
 
-import com.example.projects.dtos.users.write.UserCreateDto;
+import com.example.projects.dto.users.write.UserCreateDto;
 import com.example.projects.entities.Role;
 import com.example.projects.entities.User;
 import com.example.projects.repositories.roles.RoleRepository;
