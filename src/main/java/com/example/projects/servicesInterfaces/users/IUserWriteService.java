@@ -1,8 +1,10 @@
 package com.example.projects.servicesInterfaces.users;
 
 import com.example.projects.dto.users.write.UserCreateDto;
+import com.example.projects.dto.users.write.UserUpdateDto;
 
 public interface IUserWriteService {
 
-    public void save(UserCreateDto userCreateDto);
+    void save(UserCreateDto userCreateDto);
+    void update(Long id,UserUpdateDto userUpdateDto);
 }
