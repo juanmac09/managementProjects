@@ -49,12 +49,11 @@ public class UserController {
         return new ResponseEntity<>(apiResponse, HttpStatus.OK);
     }
 
-        @PutMapping("/update/{id}")
-        public ResponseEntity<ApiResponse<?>> update(@PathVariable("id") Long id, @RequestBody UserUpdateDto userUpdateDto) {
-            ApiResponse<?> apiResponse = new ApiResponse<>();
-            apiResponse.setMessage("User updated");
-
-            this.userWriteService.update(id,userUpdateDto);
-            return new ResponseEntity<>(apiResponse,HttpStatus.OK);
-        }
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ApiResponse<?>> update(@PathVariable("id") Long id, @RequestBody UserUpdateDto userUpdateDto) {
+        ApiResponse<?> apiResponse = new ApiResponse<>();
+        apiResponse.setMessage("User updated");
+        this.userWriteService.update(id,userUpdateDto);
+        return new ResponseEntity<>(apiResponse,HttpStatus.OK);
     }
+}
